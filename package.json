@@ -20,7 +20,10 @@
     "lint": "eslint \"src/**/*.ts*\"",
     "preview": "qwik build preview && vite preview --open",
     "start": "vite --open --mode ssr",
-    "qwik": "qwik"
+    "qwik": "qwik",
+    "postinstall": "prisma generate",
+    "prisma-generate": "prisma generate",
+    "prisma-migrate": "prisma migrate dev"
   },
   "devDependencies": {
     "@builder.io/qwik": "^1.13.0",
@@ -32,9 +35,13 @@
     "eslint": "8.57.0",
     "eslint-plugin-qwik": "^1.13.0",
     "prettier": "3.3.3",
+    "prisma": "^6.6.0",
     "typescript": "5.4.5",
     "undici": "*",
     "vite": "5.3.5",
     "vite-tsconfig-paths": "^4.2.1"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.6.0"
   }
 }
